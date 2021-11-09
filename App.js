@@ -6,6 +6,8 @@ import Login from './src/telas/Login';
 import mock from './src/mocks/login'
 import Menu from './src/telas/Menu';
 
+window.servidor = 'http://localhost:8080'
+
 export default function App() {
   return (
     <Menu/>

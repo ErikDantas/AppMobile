@@ -7,6 +7,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Login from './Login';
 import Cesta from './Cesta';
 import GerenciarClientes from './GerenciarClientes';
+import ReservaMesa from './ReservaMesa'
+import Cardapio from './Cardapio';
 
 const Drawer = createDrawerNavigator();
 
@@ -55,6 +57,23 @@ export default function Menu() {
           } } 
         />
 
+        <Drawer.Screen
+          name='Cardapio'
+          component={ Cardapio }
+          options={ {
+            drawerLabel: (({focused}) => <Text style={{color: focused ? '#313131' : '#969696' }}>Cardapio</Text>),
+            drawerIcon: (({focused}) => <Icon color={focused ? '#313131' : '#fff' } name="fastfood" />),
+          } } 
+          
+        />
+        <Drawer.Screen
+          name='Reserva de Mesa'
+          component={ ReservaMesa }
+          options={ {
+            drawerLabel: (({focused}) => <Text style={{color: focused ? '#313131' : '#969696' }}>Reservar Mesa</Text>),
+            drawerIcon: (({focused}) => <Icon color={focused ? '#313131' : '#fff' } name="table-furniture" />),
+          } } 
+        />
       </Drawer.Navigator>
     </NavigationContainer>
     
